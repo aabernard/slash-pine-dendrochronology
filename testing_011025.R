@@ -6,7 +6,8 @@ library(measuRing)
 img <- "IMG_5932_1.tiff"
 
 # first pass
-dt_1 <- ringDetect(img, segs = 3, ppi = 375.9)
+dt_1 <- ringDetect(img, segs = 3, ppi = 375.9) # ppi calculated by putting a ruler on the table 
+# below the core. this imagee was 9.5 inches across with 3571 pixels. 3571/9.5= 375.9
 
 # pretty good, but many false positives and negatives present
 
@@ -36,4 +37,8 @@ dt_4 <- ringSelect(dt_4)
 # the gui does not want to open, maybe a positron issue?
 # when opened in Rstudio, I could get the gui to start but actually moving the markers was immpossible
 # maybe I need to switch IDEs? 
+
+# plan: use automatic detection and manual correction to accurately mark the tree ring boundaries. 
+# consider recapturing the pictures since ppi with an iphone is dogey
+
 
