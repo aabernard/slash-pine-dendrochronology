@@ -31,6 +31,8 @@ cap_n2bh_02 <- ring_modify(cap_n2bh_01,
 cap_n2bh_02 <- ring_modify(cap_n2bh_02, 
             add = TRUE)
 
+cap_n2bh_03 <- ring_modify()
+
 # double check additions worked
 data.frame(
   Year = attr(cap_n2bh_02, "year"),
@@ -45,3 +47,19 @@ cap_n2bh_meas
 library(dplR)
 cap_n2bh_meas.rwl <- tempfile(fileext = ".rwl")
 write.rwl(rwl.df = cap_n2bh_meas, fname = cap_n2bh_meas.rwl, format = "tucson")
+
+# comparing the algorithmic measurements with my mechanical caliper, the dpi is wrong (algo measurements show 5.06mm for 1906, while caliper shows 7.62 mm)
+# GEMINI 3 PRO suggested this solution
+
+# 1. Update the DPI to 250
+attr(cap_n2bh_02, "x.dpi") <- 250
+
+# 2. Recalculate all ring widths with the new scale
+cap_n2bh_final_measurements <- ring_calculate(cap_n2bh_02, seriesID = "n2bh")
+
+# 3. Verify: Year 1906 should now be exactly 7.62 mm
+View(cap_n2bh_final_measurements)
+
+# 1906 is correct, but now 1907 is off 
+
+

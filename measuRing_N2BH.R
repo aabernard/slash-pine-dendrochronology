@@ -7,7 +7,7 @@ img <- "IMG_5932_1.tiff"
 
 # first pass
 dt_1 <- ringDetect(img, segs = 3, ppi = 375.9) # ppi calculated by putting a ruler on the table 
-# below the core. this imagee was 9.5 inches across with 3571 pixels. 3571/9.5= 375.9
+# below the core. this image was 9.5 inches across with 3571 pixels. 3571/9.5= 375.9
 
 # pretty good, but many false positives and negatives present
 
