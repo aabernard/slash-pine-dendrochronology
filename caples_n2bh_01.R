@@ -5,7 +5,7 @@ n2bh <- "IMG_5932_1.tiff"
 
 # what does this do?
 cap_n2bh_01 <- ring_read(img = n2bh, 
-            dpi = 375.9)
+            dpi = 300)
 
 
 # detect rings using linear detection algo
