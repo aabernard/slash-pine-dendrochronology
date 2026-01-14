@@ -11,9 +11,8 @@ img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/lp_crop.
 img_lp <- ring_read(img, dpi = 343)
 
 # detect rings 
-rings_lp <- ring_detect(img_lp, seg = 4, method = "lineardetect", sample.yr = 2025) # FLOATING CHRONOLOGY
+rings_lp <- ring_detect(img_lp, seg = 4, method = "lineardetect", sample.yr = 2025)
 
-# make a dataframe
 meas_lp <- ring_calculate(ring.data = rings_lp, seriesID = "lp")
 
 # export to .rwl 

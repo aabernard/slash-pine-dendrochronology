@@ -11,12 +11,10 @@ img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/cl1_crop
 img_cl01 <- ring_read(img, dpi = 340)
 
 # detect rings 
-rings_cl01 <- ring_detect(img_cl01, seg = 4, method = "lineardetect", sample.yr = 2024)
-
-meas_cl01 <- ring_modify(rings_cl01, del = c())
+rings_cl01 <- ring_detect(img_cl01, seg = 4, method = "lineardetect", sample.yr = 1000)
 
 # make a dataframe
 meas_cl01 <- ring_calculate(ring.data = rings_cl01, seriesID = "CL01")
 
 # export to .rwl 
-meas_345346 <- write.rwl(rwl.df = meas_345346, fname = "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/output/CL01_meas.rwl", format = "tucson")
+meas_345346 <- write.rwl(rwl.df = meas_cl01, fname = "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/output/cl1_meas.rwl", format = "tucson")

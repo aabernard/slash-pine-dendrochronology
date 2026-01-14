@@ -8,13 +8,13 @@ library(dplR)
 img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/btp_crop.jpg"
 
 # read image from disk
-img_BTP <- ring_read(img, dpi = 348)
+img_btp <- ring_read(img, dpi = 348)
 
 # detect rings 
-rings_BTP <- ring_detect(img_BTP, seg = 4, method = "lineardetect", sample.yr = 2024)
+rings_btp <- ring_detect(img_btp, seg = 4, method = "lineardetect", sample.yr = 1000)
 
 # make a dataframe
-meas_BTP <- ring_calculate(ring.data = rings_BTP, seriesID = 345371)
+meas_btp <- ring_calculate(ring.data = rings_btp, seriesID = "btp")
 
 # export to .rwl 
-meas_345346 <- write.rwl(rwl.df = meas_345346, fname = "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/output/345346_meas.rwl", format = "tucson")
+meas_btp <- write.rwl(rwl.df = meas_btp, fname = "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/output/btp_meas.rwl", format = "tucson")

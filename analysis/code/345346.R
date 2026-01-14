@@ -11,8 +11,8 @@ img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/345346_c
 img_345346 <- ring_read(img, dpi = 340)
 
 # detect rings 
-rings_345346 <- ring_detect(img_345346, seg = 4, method = "lineardetect", sample.yr = 2024)
-
+rings_345346 <- ring_detect(img_345346, seg = 4, method = "lineardetect", sample.yr = 1000) # FLOATING CHRONOLOGY
+ 
 # make a dataframe
 meas_345346 <- ring_calculate(ring.data = rings_345346, seriesID = 345346)
 
