@@ -3,14 +3,7 @@
 .RData
 .Ruserdata
 fl-dendro.Rproj
-Settings. 
-.venv/
-.venv_deepdendro-env/
-results/
-*.tiff
-*.tif
 .DS_Store
 __pycache__/
 .python-version
 .gitattributes
-EOF
