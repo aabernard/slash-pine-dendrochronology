@@ -11,7 +11,7 @@ img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/pp_crop.
 img_pp <- ring_read(img, dpi = 343)
 
 # detect rings 
-rings_pp <- ring_detect(img_pp, seg = 4, method = "lineardetect", sample.yr = 2025)
+rings_pp <- ring_detect(img_pp, seg = 4, method = "lineardetect", sample.yr = 1000) # FLOATING CHRONOLOGY
 
 # make a dataframe
 meas_pp <- ring_calculate(ring.data = rings_pp, seriesID = "pp")

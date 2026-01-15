@@ -8,7 +8,7 @@ library(dplR)
 img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/cr_crop.jpg"
 
 # read image from disk
-img_cr <- ring_read(img, dpi = 343)
+img_cr <- ring_read(img, dpi = 340)
 
 # detect rings 
 rings_cr <- ring_detect(img_cr, seg = 4, method = "lineardetect", sample.yr = 1000) # FLOATING CHRONOLOGY, TO BE CROSSDATED

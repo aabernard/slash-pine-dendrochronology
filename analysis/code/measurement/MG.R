@@ -8,7 +8,7 @@ library(dplR)
 img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/mg_crop.jpg"
 
 # read image from disk
-img_mg <- ring_read(img, dpi = 343)
+img_mg <- ring_read(img, dpi = 340)
 
 # detect rings 
 rings_mg <- ring_detect(img_mg, seg = 4, method = "lineardetect", sample.yr = 2025)

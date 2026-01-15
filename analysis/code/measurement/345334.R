@@ -1,4 +1,4 @@
-# 345334 TREE ANALYSIS 
+# 345334 TREE RING MEASUREMENT
 
 # load libs
 library(MtreeRing)
@@ -8,7 +8,7 @@ library(dplR)
 img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/345334_crop.jpg"
 
 # read image from disk
-img_345334 <- ring_read(img, dpi = 345)
+img_345334 <- ring_read(img, dpi = 340)
 
 # detect rings 
 rings_345334 <- ring_detect(img_345334, seg = 4, method = "lineardetect", sample.yr = 1000) # FLOATING CHRONOLOGY

@@ -8,10 +8,10 @@ library(dplR)
 img <- "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/images/btp_crop.jpg"
 
 # read image from disk
-img_btp <- ring_read(img, dpi = 348)
+img_btp <- ring_read(img, dpi = 340)
 
 # detect rings 
-rings_btp <- ring_detect(img_btp, seg = 4, method = "lineardetect", sample.yr = 1000)
+rings_btp <- ring_detect(img_btp, seg = 7, method = "lineardetect", sample.yr = 1000)
 
 # make a dataframe
 meas_btp <- ring_calculate(ring.data = rings_btp, seriesID = "btp")
