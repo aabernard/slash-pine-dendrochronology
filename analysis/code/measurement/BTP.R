@@ -18,3 +18,4 @@ meas_btp <- ring_calculate(ring.data = rings_btp, seriesID = "btp")
 
 # export to .rwl 
 meas_btp <- write.rwl(rwl.df = meas_btp, fname = "/Users/alyssabernard/Documents/GitHub/fl-dendro/analysis/output/btp_meas.rwl", format = "tucson")
+
